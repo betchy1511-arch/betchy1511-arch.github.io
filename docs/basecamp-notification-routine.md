@@ -13,10 +13,11 @@ scheduled tasks themselves.
 | Run | Time | Notes |
 |---|---|---|
 | Evening | 8:15 PM daily | Holds the rules |
+| Late evening | 10:00 PM daily (runs at 9:57) | Reads the rules from the evening task |
 | Midnight | 12:00 AM daily (runs about 12:03) | Reads the rules from the evening task |
 
-Both tasks run inside one Claude Code conversation. If that conversation is
-archived, both stop.
+All three tasks run inside one Claude Code conversation. If that conversation is
+archived, they all stop.
 
 ## What gets cleared (marked as read)
 
@@ -63,4 +64,4 @@ E. **The QC teammate's @mentions that are QC reports** – cleared when the
 
 Tell Claude in that conversation, for example "also clear X", "stop clearing
 Y" or "change the time to Z". Rule changes are made to the evening task and
-the midnight run picks them up automatically.
+the later runs pick them up automatically.
